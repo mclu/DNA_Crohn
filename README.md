@@ -23,4 +23,4 @@ install.packages('future')
 ```
 
 ## Remark
-The repo is  revised work of the course [Stats506 Computational Methods and Tools in Statistics](https://jbhender.github.io/Stats506/F19/index.html) taught by Dr. Henderson.
+The repo is a revised work of the course [Stats506 Computational Methods and Tools in Statistics](https://jbhender.github.io/Stats506/F19/index.html) taught by Dr. Henderson.
