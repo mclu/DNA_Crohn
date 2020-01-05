@@ -1,0 +1,45 @@
+---
+title: "Analysis of Methylation for Crohn's Disease"
+author: "Ming-Chen Lu, mingchlu@umich.edu"
+date: "`r format.Date(Sys.Date(), '%B %d, %Y')`"
+geometry: "left = 2cm, right = 2cm, top = 2cm, bottom = 2cm"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(root.dir = './Desktop/DNA_Crohn', 
+                      results = 'asis', message = FALSE, 
+                      fig.height = 4)
+library(tidyverse)
+library(data.table)
+library(future)
+source('DNA_Crohn.R')
+```
+
+### Comparing adipocyte methylation in Crohn's to Non-Crohn's
+The plot shows that the probe group of ch.14 seems to be over-represented.
+
+```{r q2_hist, echo = FALSE}
+plot
+```
+
+### Timing Comparison
+
+```{r q2_time, echo = FALSE}
+cat(sprintf("Time for computing the 1,000 permutations.  \n
+part h - sequential: %5.3fs  \n
+part i - mclapply: %5.3fs  \n
+part j - futures: %5.3f", t1[3], t2[3], t3[3]))
+```
+
+\pagebreak
+
+### Results
+
+```{r q2_table, echo = FALSE}
+cap = paste("*P-values for testing whether the observed T score for each group",
+            "is larger than expected under the null hypothesis that patterns",
+            "of gene expression are the same across the Crohn's and",
+            "non-Crohn's groups after 1000 permutations.*")
+knitr::kable(tbl, caption = cap)
+```
+
