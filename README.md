@@ -8,7 +8,7 @@ The repo analyzes DNA methylation in Adipocyte Tissues for Crohn's Disease, alon
 - 
 
 ## Installation
-Data can be downloaded using the command line. Details of the data and experiment can be found on the [Gene Expression Omnibus website](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138311)
+Data can be [downloaded](ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE138nnn/GSE138311/matrix/) using the command line. Details of the data and experiment can be found on the [Gene Expression Omnibus website](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138311)
 
 ```bash
 wget -O - ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE138nnn/GSE138311/matrix/GSE138311_series_matrix.txt.gz | gunzip -c > matrix.txt
